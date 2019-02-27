@@ -24,8 +24,8 @@ class KalmanFilter {
    * @param R_in Measurement covariance matrix
    * @param Q_in Process covariance matrix
    */
-  void Init(Eigen::VectorXd &x_in, Eigen::MatrixXd &P_in, Eigen::MatrixXd &F_in,
-            Eigen::MatrixXd &H_in, Eigen::MatrixXd &R_in, Eigen::MatrixXd &Q_in);
+  void Init(const Eigen::VectorXd &x_in, const Eigen::MatrixXd &P_in, const Eigen::MatrixXd &F_in,
+            const Eigen::MatrixXd &H_laser_in, const Eigen::MatrixXd &R_laser_in, const Eigen::MatrixXd &R_rader_in, const Eigen::MatrixXd &Q_in);
 
   /**
    * Prediction Predicts the state and the state covariance
@@ -44,7 +44,7 @@ class KalmanFilter {
    * Updates the state by using Extended Kalman Filter equations
    * @param z The measurement at k+1
    */
-  void UpdateEKF(const Eigen::VectorXd &z);
+  void UpdateEKF(const Eigen::VectorXd &z, const Eigen::MatrixXd &Hj_);
 
   // state vector
   Eigen::VectorXd x_;
@@ -59,10 +59,11 @@ class KalmanFilter {
   Eigen::MatrixXd Q_;
 
   // measurement matrix
-  Eigen::MatrixXd H_;
+  Eigen::MatrixXd H_laser_;
 
   // measurement covariance matrix
-  Eigen::MatrixXd R_;
+  Eigen::MatrixXd R_laser_;
+  Eigen::MatrixXd R_radar_;
 };
 
 #endif // KALMAN_FILTER_H_
