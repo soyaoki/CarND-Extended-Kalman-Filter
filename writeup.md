@@ -57,21 +57,10 @@ px, py, vx, and vy RMSE were less than or equal to the values [.11, .11, 0.52, 0
 
 ![alt text](./results/RADAR_2.png)
 
-<pre style="border: none; font-size: 100%;">
-[tex:{\displaystyle 
-  A =
-    \begin{pmatrix}
-      a & b & c \\
-      d & e & f \\
-      g & h & i
-    \end{pmatrix}
-}]
-</pre>
-
-|       | Lidar | Radar |
+| measuremental noise (variance) | Lidar | Radar |
 |:-----------:|:------------:|:------------:|
-| px noise | 0.0225 | - |
-| py noise | 0.0225 | - |
-| ro noise | - | 0.09 |
-| phi noise | - | 0.0009 |
-| ro_dot noise | - | 0.09 |
+| px | 0.0225 | - |
+| py | 0.0225 | - |
+| ro | - | 0.09 |
+| phi | - | 0.0009 |
+| ro_dot | - | 0.09 |
