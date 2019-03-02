@@ -61,8 +61,10 @@ Results is shown below. RMSEs of using only Radar data were twice of Lidar data.
 |:-----------:|:------------:|:------------:|:------------:|:------------:|
 | Dataset 1 ( Only Lidar ) | 0.1470 | 0.1153 | 0.6097 | 0.5378 |
 | Dataset 1 ( Only Radar ) | 0.2279 | 0.3460 | 0.5728 | 0.7970 |
+| Dataset 1 ( Lidar and Radar ) | 0.0964 | 0.0853 | 0.4154 | 0.4316 |
 | Dataset 2 ( Only Lidar ) | 0.1169 | 0.1260 | 0.6227 | 0.6024 |
 | Dataset 2 ( Only Radar ) | 0.2706 | 0.3853 | 0.6524 | 0.9218 |
+| Dataset 2 ( Lidar and Radar ) | 0.0726 | 0.0965 | 0.4216 | 0.4932 |
 
 Each noise value in measurement covariance matrix were following. Radar data was more noisy than Lidar data.
 So it caused the results of RMSE.
