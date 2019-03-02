@@ -42,22 +42,30 @@ px, py, vx, and vy RMSE were less than or equal to the values [.11, .11, 0.52, 0
 ------- Only Lidar data -------
 
 【Dataset 1】
-
 ![alt text](./results/LIDAR_1.png)
 
 【Dataset 2】
-
 ![alt text](./results/LIDAR_2.png)
 
 ------- Only Radar data -------
 
 【Dataset 1】
-
 ![alt text](./results/RADAR_1.png)
 
 【Dataset 2】
-
 ![alt text](./results/RADAR_2.png)
+
+Results is shown below. RMSEs of using only Radar data were twice of Lidar data.
+
+| RMSE | X | Y | VX | VY |
+|:-----------:|:------------:|:------------:|:------------:|
+| Dataset 1 ( Only Lidar ) | 0.1470 | 0.1153 | 0.6097 | 0.5378 |
+| Dataset 1 ( Only Radar ) | 0/2279 | 0.3460 | 0.5728 | 0.7970 |
+| Dataset 2 ( Only Lidar ) | 0.1169 | 0.1260 | 0.6227 | 0.6024 |
+| Dataset 2 ( Only Radar ) | 0.2706 | 0.3853 | 0.6524 | 0.9218 |
+
+Each noise value in measurement covariance matrix were following. Radar data was more noisy than Lidar data.
+So it caused the results of RMSE.
 
 | measuremental noise (variance) | Lidar | Radar |
 |:-----------:|:------------:|:------------:|
@@ -66,3 +74,6 @@ px, py, vx, and vy RMSE were less than or equal to the values [.11, .11, 0.52, 0
 | ro | - | 0.09 |
 | phi | - | 0.0009 |
 | ro_dot | - | 0.09 |
+
+But compared RSME value of case using only lidar data, RSME of case using lidar and radar (more noisy) data was good.
+It showed that sensing by two sensor was more reliabel than only one sensor even though added sensor reliability was low (the sensor data was noisy).
