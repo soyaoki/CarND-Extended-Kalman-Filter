@@ -60,7 +60,7 @@ Results is shown below. RMSEs of using only Radar data were twice of Lidar data.
 | RMSE | X | Y | VX | VY |
 |:-----------:|:------------:|:------------:|:------------:|:------------:|
 | Dataset 1 ( Only Lidar ) | 0.1470 | 0.1153 | 0.6097 | 0.5378 |
-| Dataset 1 ( Only Radar ) | 0/2279 | 0.3460 | 0.5728 | 0.7970 |
+| Dataset 1 ( Only Radar ) | 0.2279 | 0.3460 | 0.5728 | 0.7970 |
 | Dataset 2 ( Only Lidar ) | 0.1169 | 0.1260 | 0.6227 | 0.6024 |
 | Dataset 2 ( Only Radar ) | 0.2706 | 0.3853 | 0.6524 | 0.9218 |
 
