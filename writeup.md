@@ -57,11 +57,9 @@ px, py, vx, and vy RMSE were less than or equal to the values [.11, .11, 0.52, 0
 
 ![alt text](./results/RADAR_2.png)
 
-A=\left(
-\begin{array}{cc} 
-a & b \\ c & d 
-\end{array}
-\right)
+$$ A = \begin{pmatrix}
+0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0
+\end{pmatrix}$$
 
 |       | Lidar | Radar |
 |:-----------:|:------------:|:------------:|
