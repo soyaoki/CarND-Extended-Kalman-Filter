@@ -151,15 +151,13 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
     Hj_ = tools.CalculateJacobian(ekf_.x_);
     ekf_.UpdateEKF(measurement_pack.raw_measurements_, Hj_);
     std::cout << "Update by EKF is Done!" << std::endl;
-
   } else {
     // TODO: Laser updates
     ekf_.Update(measurement_pack.raw_measurements_);
     std::cout << "Update by KF is Done!" << std::endl;
-
   }
 
   // print the output
-  cout << "x_ = " << ekf_.x_ << endl;
-  cout << "P_ = " << ekf_.P_ << endl;
+  std::cout << "x_ = " << ekf_.x_ << std::endl;
+  std::cout << "P_ = " << ekf_.P_ << std::endl;
 }
