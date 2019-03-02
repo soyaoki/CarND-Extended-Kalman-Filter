@@ -9,7 +9,7 @@
 The goals / steps of this project are the following:
 * Implement Extended Kalman Filter (EKF) and Kalman Filter (KF) in C++
 * Load RADAR and LIDAR data and Track an object using the data
-* px, py, vx, and vy RMSE should be less than or equal to the values [.11, .11, 0.52, 0.52]
+* px, py, vx, and vy RMSE should be less than or equal to the values [0.11, 0.11, 0.52, 0.52]
 * Analyze what happens when you turn off radar or lidar
 
 
@@ -35,7 +35,7 @@ Lidar measurements are red circles, radar measurements are blue circles with an 
 
 ![alt text](./results/SF_2.png)
 
-px, py, vx, and vy RMSE were less than or equal to the values [.11, .11, 0.52, 0.52]
+px, py, vx, and vy RMSE were less than or equal to the values [0.11, 0.11, 0.52, 0.52]
 
 #### 3. Analyze what happens when you turn off radar or lidar
 
