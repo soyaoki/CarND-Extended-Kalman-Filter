@@ -59,6 +59,7 @@ void KalmanFilter::UpdateEKF(const VectorXd &z, const MatrixXd &Hj_) {
 //  std::cout << "Updating by EKF..." << std::endl;
   float rho = sqrt(x_(0)*x_(0) + x_(1)*x_(1));
   float phi = atan2(x_(1), x_(0));
+  std::cout << "phi = " << phi << std::endl;
   float rho_dot;
   if (fabs(rho) < 0.0001) {
     rho_dot = 0;
@@ -68,6 +69,14 @@ void KalmanFilter::UpdateEKF(const VectorXd &z, const MatrixXd &Hj_) {
   VectorXd z_pred(3);
   z_pred << rho, phi, rho_dot;
   VectorXd y = z - z_pred;
+  
+  while ( y(1) > M_PI || y(1) < -M_PI ) {
+    if ( y(1) > M_PI ) {
+      y(1) -= M_PI;
+    } else {
+      y(1) += M_PI;
+    }
+  }
 //  std::cout << y << std::endl;
 //  std::cout << Hj_ << std::endl;
   MatrixXd S = Hj_*P_*Hj_.transpose() + R_radar_;
